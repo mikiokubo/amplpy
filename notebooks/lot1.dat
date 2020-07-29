@@ -1,0 +1,65 @@
+param T:=5;
+set Prod :=prod1 prod2 prod3 prod4 prod5 prod6 ;
+set Resource :=res1 res2 ;
+set Parent[prod1] := prod3 prod4  ;
+set Parent[prod2] := prod3 prod4  ;
+set Parent[prod3] := prod5  ;
+set Parent[prod4] := prod6  ;
+param Unit  := 
+prod1 prod3 2
+prod1 prod4 1
+prod2 prod3 1
+prod2 prod4 2
+prod3 prod5 6
+prod4 prod6 6
+ ;
+param: ResourceProdPair: R :=
+res1 prod3  0.002
+res1 prod4  0.004
+res2 prod5  0.03
+res2 prod6  0.04
+;
+param ResourceUB :=
+res1  1 24
+res1  2 24
+res1  3 24
+res1  4 24
+res1  5 24
+res2  1 24
+res2  2 24
+res2  3 24
+res2  4 24
+res2  5 24
+;
+param: SetUpCost SetUpTime VariableCost HoldingCost Demand MinResourceUB:=
+prod1  1 0  0  0  1  2520 99999999999
+prod1  2 0  0  0  1  3180 99999999999
+prod1  3 0  0  0  1  3960 99999999999
+prod1  4 0  0  0  1  3840 99999999999
+prod1  5 0  0  0  1  3600 99999999999
+prod2  1 0  0  0  2  2340 99999999999
+prod2  2 0  0  0  2  2760 99999999999
+prod2  3 0  0  0  2  3420 99999999999
+prod2  4 0  0  0  2  3540 99999999999
+prod2  5 0  0  0  2  3600 99999999999
+prod3  1 10000  10  10  4  900 7000
+prod3  2 10000  10  10  4  1200 7000
+prod3  3 10000  10  10  4  1500 7000
+prod3  4 10000  10  10  4  1380 7000
+prod3  5 10000  10  10  4  1200 7000
+prod4  1 10000  5  15  4  720 4750
+prod4  2 10000  5  15  4  780 4750
+prod4  3 10000  5  15  4  960 4750
+prod4  4 10000  5  15  4  1080 4750
+prod4  5 10000  5  15  4  1200 4750
+prod5  1 60000  3  2  6  150 700
+prod5  2 60000  3  2  6  200 700
+prod5  3 60000  3  2  6  250 700
+prod5  4 60000  3  2  6  230 700
+prod5  5 60000  3  2  6  200 700
+prod6  1 50000  2  2.5  20  120 550
+prod6  2 50000  2  2.5  20  130 550
+prod6  3 50000  2  2.5  20  160 550
+prod6  4 50000  2  2.5  20  180 550
+prod6  5 50000  2  2.5  20  200 550
+;

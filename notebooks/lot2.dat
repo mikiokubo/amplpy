@@ -1,0 +1,64 @@
+param T:= 10 ;
+set Prod :=prod1 prod2 prod3 prod4 ;
+set Parent[prod1]:=   ;
+set Parent[prod2]:=prod1;
+set Parent[prod3]:=prod1;
+set Parent[prod4]:=   ;
+param Unit  :=prod2 prod1  1  prod3 prod1  2 ;
+set Resource :=res1 ;
+set ResourceProdPair := res1 prod1   res1 prod2  res1 prod3 res1 prod4;
+param ResourceUB :=
+res1  1  50 
+res1  2  50 
+res1  3  50 
+res1  4  50 
+res1  5  50 
+res1  6  50 
+res1  7  50 
+res1  8  50 
+res1  9  50 
+res1  10  50 
+;
+param R :=  res1 prod1 1  res1 prod2  2  res1 prod3 1  res1 prod4 1;
+param: SetUpCost SetUpTime VariableCost HoldingCost Demand MinResourceUB:=
+prod1  1  86    1    1    10    1  49 
+prod1  2  71    1    1    10    5  49 
+prod1  3  20    1    1    10    1  49 
+prod1  4  86    1    1    10    2  49 
+prod1  5  15    1    1    10    4  49 
+prod1  6  79    1    1    10    2  49 
+prod1  7  32    1    1    10    3  49 
+prod1  8  21    1    1    10    3  49 
+prod1  9  14    1    1    10    2  49 
+prod1  10  106    1    1    10    1  49 
+prod2  1  28    1    1    10    4  49 
+prod2  2  63    1    1    10    10  49 
+prod2  3  41    1    1    10    4  49 
+prod2  4  85    1    1    10    7  49 
+prod2  5  108    1    1    10    9  49 
+prod2  6  90    1    1    10    6  49 
+prod2  7  96    1    1    10    8  49 
+prod2  8  101    1    1    10    8  49 
+prod2  9  31    1    1    10    3  49 
+prod2  10  56    1    1    10    5  49 
+prod3  1  66    1    1    10    4  49 
+prod3  2  39    1    1    10    15  49 
+prod3  3  75    1    1    10    6  49 
+prod3  4  41    1    1    10    9  49 
+prod3  5  77    1    1    10    12  49 
+prod3  6  38    1    1    10    5  49 
+prod3  7  78    1    1    10    9  49 
+prod3  8  103    1    1    10    8  49 
+prod3  9  44    1    1    10    8  49 
+prod3  10  36    1    1    10    3  49 
+prod4  1  94    1    1    10    5  49 
+prod4  2  25    1    1    10    4  49 
+prod4  3  23    1    1    10    3  49 
+prod4  4  25    1    1    10    3  49 
+prod4  5  42    1    1    10    3  49 
+prod4  6  69    1    1    10    5  49 
+prod4  7  56    1    1    10    1  49 
+prod4  8  97    1    1    10    5  49 
+prod4  9  52    1    1    10    5  49 
+prod4  10  20    1    1    10    5  49 
+;

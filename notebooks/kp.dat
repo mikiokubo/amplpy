@@ -1,0 +1,42 @@
+set Bear := VerySmall Small Medium Large;
+param file -
+line 1
+offset 33
+Edge is not defined;
+param file -
+line 1
+offset 33
+Market is not defined;
+param file -
+line 1
+offset 33
+Warehouse is not defined;
+param MaxWeight = 7;
+param file -
+line 1
+offset 33
+Demand is not defined;
+param file -
+line 1
+offset 33
+FixedCost is not defined;
+param file -
+line 1
+offset 33
+Supply is not defined;
+param file -
+line 1
+offset 33
+TransCost is not defined;
+param Value [*] :=
+    Large  28
+   Medium  23
+    Small  19
+VerySmall  16
+;
+param Weight [*] :=
+    Large  5
+   Medium  4
+    Small  3
+VerySmall  2
+;
